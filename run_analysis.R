@@ -107,3 +107,5 @@
     library(reshape2)
     datamelt <- melt(dataset1, id=c("student","activity"))
     dataset2 <- dcast(datamelt, student + activity ~ variable, mean)
+# 6. Export tidy data set to a text file
+    write.table(dataset2,file="tidydata2.txt",sep=" ")
